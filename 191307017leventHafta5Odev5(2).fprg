@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="45"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-30 10:05:47 &#214;&#214;"/>
+        <attribute name="created" value="NDU7REVTS1RPUC1OS1VIQU8xOzIwMTktMTAtMzA7MDk6MDk6Mzkgw5bDljsyNzUy"/>
+        <attribute name="edited" value="NDU7REVTS1RPUC1OS1VIQU8xOzIwMTktMTAtMzA7MTA6MDU6NDcgw5bDljs0OzI4NTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="say&#305;, saya&#231;, toplam, birler, neon, n, levo, uzunluk" type="Integer" array="False" size=""/>
+            <assign variable="levo" expression="0"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="toplam" expression="0"/>
+            <assign variable="saya&#231;" expression="0"/>
+            <output expression="&quot;Bir say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;"/>
+            <assign variable="levo" expression="say&#305;"/>
+            <assign variable="uzunluk" expression="Len(ToString(say&#305;))"/>
+            <if expression="uzunluk&lt;=4">
+                <then>
+                    <while expression="say&#305;!=0">
+                        <assign variable="birler" expression="say&#305;%10"/>
+                        <assign variable="say&#305;" expression="say&#305;/10"/>
+                        <assign variable="saya&#231;" expression="saya&#231;+1"/>
+                        <assign variable="toplam" expression="toplam + birler"/>
+                    </while>
+                    <assign variable="n" expression="n+saya&#231;"/>
+                    <assign variable="neon" expression="toplam^(n)"/>
+                    <if expression="neon=levo">
+                        <then>
+                            <output expression="levo&amp;&quot; say&#305;s&#305; neon say&#305;d&#305;r&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="levo&amp;&quot; say&#305;s&#305; neon say&#305; de&#287;ildir&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;L&#252;tfen en fazla 4 basamakl&#305; bir say&#305; giriniz&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
